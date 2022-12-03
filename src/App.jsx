@@ -1,4 +1,3 @@
-import './index.css';
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import UseStatePage from "./pages/UseStatePage";
 
