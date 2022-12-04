@@ -16,7 +16,8 @@ const UseStatePage = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center mt-10">
+      <p className="text-2xl mb-10">React Hooks Tutorial : useState</p>
       <div className="flex">
         <button type="button" className="px-4 font-medium text-center text-white bg-blue-700 mr-5">
           A
@@ -32,7 +33,7 @@ const UseStatePage = () => {
           ＋
         </button>
       </div>
-      <div className="flex mt-5 mb-5">
+      <div className="flex mt-5 mb-20">
         <button type="button" className="px-4 font-medium text-center text-white bg-red-600 mr-5">
           B
         </button>
@@ -77,16 +78,44 @@ const UseStatePage = () => {
             <Typography>
               結論: useState というフックを使う。
               <br />
+              A の挙動を再現するコードは下記の通り。（解説は後述）
               <code className="bg-slate-200 block mb-5">
                 import {"{"} useState {"}"} from "react";
                 <br />
+                <br />
                 const CountComponent = () => {'{'}
                 <br />
-                  <p className="ml-3">const [count, setCount] = (0);</p>
-                  <p className="ml-3">// 以下略</p>
+                const [count, setCount] = useState(0);
+                <br />
+                const handleClick = () => {'{'}
+                <br />
+                <p className="ml-5">count + 1;</p>
                 {'}'}
+                <br />
+                <br />
+                return (<br />
+                  <p className="ml-5">&lt;div&gt;<br /></p>
+                  <p className="ml-10">&lt;button&gt;&lt;span&gt; Count: {'{'}count{'}'} &lt;/span&gt;&lt;/button&gt;<br /></p>
+                  <p className="ml-10">&lt;button type="button" onClick={'{'}handleClick{'}'} &gt;＋&lt;/button&gt;<br /></p>
+                  <p className="ml-5">&lt;/div&gt;<br /></p>
+                )
               </code>
-              上記サンプルコードの記述の意味は以下の通り↓
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography>useStateとは？</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              useStateとは、「ステートフック」と呼ばれるもので、JavaScript変数を「state変数」として保持し、変数の状態管理を実現することができる。（通常、変数は関数の実行が終了すると消えてしまう。）
+              <br />
+              <br />
+              useStateを使うことで、変数の状態がReactで保持されて、変更を反映させる関数(=set〇〇)が変数に変更が生じると動作するので、変数更新時のレンダリングが行われる仕組みが成立する。
+              <br />
+              useStateを使わないと、変数の中身は変わってもその状態がReact側で保持されず、かつ変更を反映させる関数もないので変数更新時のレンダリングが行われる仕組みが成立しない。
+              <br />
               <br />
               <code className="bg-slate-200 block">
                 import {"{"} useState {"}"} from "react";
@@ -94,41 +123,45 @@ const UseStatePage = () => {
                 // フックを使う際は import 記述が必要(useState以外のフックに関しても同様)
               </code>
               <code className="bg-slate-200 block mt-5 mb-5">
-              const [count, setCount] = (0);
-              <br />
-              // const [Countの現在の状態(state), Countのstateを更新するための関数] = (初期値)
+                const [count, setCount] = (0);
+                <br />
+                // const [countの現在の値(state), countのstateを更新するための関数] = (初期値)
               </code>
-              useStateを使わないと、変数の中身は変わってもその状態がReact側で保持されず、かつ変更を反映させる関数もないので変数更新時のレンダリングが行われない。
               <br />
-              useStateを使うことで、変数の状態がReactで保持されて、変更を反映させる関数(=set〇〇)が変数に変更が生じると動作するので、変数更新時のレンダリングが行われる。
-              <br />
-              <br />
-              変数の更新と同時にレンダリングを実現するには、useStateの「変更を反映させる関数」を変数の更新を行うイベントに合わせて発火させる必要がある。
+              useState単体だけでは「変数の更新と同時にレンダリング」を実現できないので、useStateの「変更を反映させる関数」を変数の更新を行うイベントに合わせて発火させる必要がある。
               <br/>
-              例えば、A の動作を再現する場合のコードは以下の通り↓
+              前項で紹介した A の動作を再現するコードを確認してみると・・・
               <code className="bg-slate-200 block mt-5 mb-5">
-                const CountComponent = () => {'{'}<br/>
-                const [count, setCount] = useState(0);<br/>
+                import {"{"} useState {"}"} from "react";
+                <br />
+                <br />
+                const CountComponent = () => {'{'}
+                <br />
+                const [count, setCount] = useState(0);
+                <br />
+                const handleClick = () => {'{'}
+                <br />
+                <p className="ml-5">count + 1;</p>
+                {'}'}
+                <br />
+                <br />
                 return (<br/>
                   <p className="ml-5">&lt;div&gt;<br/></p>
-                  <p className="ml-10">// return 内でJavaScript変数・関数を呼び出す場合はオブジェクトリテラルで囲う必要がある<br/></p>
+                  <p className="ml-10">// JSXのreturn内でJavaScript変数・関数を呼び出す場合は{'{'} {'}'}で変数・関数名を囲う<br/></p>
                   <p className="ml-10">&lt;button&gt;&lt;span&gt; Count: {'{'}count{'}'} &lt;/span&gt;&lt;/button&gt;<br/></p>
-                  <p className="ml-10">&lt;button type="button" onClick={'{'}() => setCount(count + 1){'}'} &gt;＋&lt;/button&gt;<br/></p>
+                  <p className="ml-10">&lt;button type="button" onClick={'{'}handleClick{'}'} &gt;＋&lt;/button&gt;<br/></p>
                   <p className="ml-5">&lt;/div&gt;<br/></p>
                 )
               </code>
-              buttonのonClick属性に、「変更を反映させる関数」を設定することで、「変更を反映させる関数」がイベントハンドラとなり、ボタンクリックと同時にCountの数値が更新、ブラウザがレンダリングされる。<br /><br />
+              buttonのonClick属性に、「変更を反映させる関数」を設定されている。この「変更を反映させる関数」がイベントハンドラとなり、ボタンクリックと同時にCountの数値が更新、ブラウザがレンダリングされるという流れになる。<br /><br />
               参考：以下の記述でもOK<br />
               <code className="bg-slate-200 block mt-5 mb-5">
                 const CountComponent = () => {'{'}<br/>
                 const [count, setCount] = useState(0);<br/>
-                const handleClick = () => {'{'}<br />
-                <p className="ml-5">count + 1;</p>
-                {'}'}<br/>
                 return (<br/>
                   <p className="ml-5">&lt;div&gt;<br/></p>
                   <p className="ml-10">&lt;button&gt;&lt;span&gt; Count: {'{'}count{'}'} &lt;/span&gt;&lt;/button&gt;<br/></p>
-                  <p className="ml-10">&lt;button type="button" onClick={'{'}handleClick{'}'} &gt;＋&lt;/button&gt;<br/></p>
+                  <p className="ml-10">&lt;button type="button" onClick={'{'}() => setCount(count + 1){'}'} &gt;＋&lt;/button&gt;<br/></p>
                   <p className="ml-5">&lt;/div&gt;<br/></p>
                 )
               </code>
