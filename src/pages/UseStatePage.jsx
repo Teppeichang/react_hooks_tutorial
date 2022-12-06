@@ -116,12 +116,12 @@ const UseStatePage = () => {
               <code className="bg-slate-200 block">
                 import {"{"} useState {"}"} from "react";
                 <br />
-                // フックを使う際は import 記述が必要(useState以外のフックに関しても同様)
+                # フックを使う際は import 記述が必要(useState以外のフックに関しても同様)
               </code>
               <code className="bg-slate-200 block mt-5 mb-5">
                 const [count, setCount] = (0);
                 <br />
-                // const [countの現在の値(state), countのstateを更新するための関数] = (初期値)
+                # const [countの現在の値(state), countのstateを更新するための関数] = (初期値)
               </code>
               <br />
               useState単体だけでは「変数の更新と同時にレンダリング」を実現できないので、useStateの「変更を反映させる関数」を変数の更新を行うイベントに合わせて発火させる必要がある。
@@ -143,7 +143,7 @@ const UseStatePage = () => {
                 <br />
                 return (<br/>
                   <p className="ml-5">&lt;div&gt;<br/></p>
-                  <p className="ml-10">// JSXのreturn内でJavaScript変数・関数を呼び出す場合は{'{'} {'}'}で変数・関数名を囲う<br/></p>
+                  <p className="ml-10"># JSXのreturn内でJavaScript変数・関数を呼び出す場合は{'{'} {'}'}で変数・関数名を囲う<br/></p>
                   <p className="ml-10">&lt;button&gt;&lt;span&gt; Count: {'{'}count{'}'} &lt;/span&gt;&lt;/button&gt;<br/></p>
                   <p className="ml-10">&lt;button type="button" onClick={'{'}handleClick{'}'} &gt;＋&lt;/button&gt;<br/></p>
                   <p className="ml-5">&lt;/div&gt;<br/></p>
