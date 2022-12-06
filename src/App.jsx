@@ -11,6 +11,7 @@ import { List } from "@mui/material";
 import Top from "./pages/Top";
 import UseStatePage from "./pages/UseStatePage";
 import UseEffectPage from "./pages/UseEffectPage";
+import AboutHooks from "./pages/AboutHooks";
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -33,9 +34,9 @@ function App() {
         </AppBar>
         <Drawer sx={{ width: 400 }} variant="temporary" open={open} onClose={handleToggle}>
           <List sx={{ display: 'flex', flexDirection: 'column', p: 2, lineHeight: 3 }}>
+            <Link to="/about-hooks" className="hover:text-sky-400 hover:underline">React Hooksとは？</Link>
             <Link to="/usestate" className="hover:text-sky-400 hover:underline">useState</Link>
             <Link to="/useeffect" className="hover:text-sky-400 hover:underline">useEffect</Link>
-            <p>useContext</p>
           </List>
         </Drawer>
       </Box>
@@ -43,6 +44,7 @@ function App() {
         <Route path="/" element={<Top />} />
         <Route path="/usestate" element={<UseStatePage />} />
         <Route path="/useeffect" element={<UseEffectPage />} />
+        <Route path="/about-hooks" element={<AboutHooks />}/>
       </Routes>
     </BrowserRouter>
   );
