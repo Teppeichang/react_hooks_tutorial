@@ -1,6 +1,6 @@
 const AboutHooks = () => {
   return (
-    <div className="mt-5 p-10 flex flex-col min-h-screen">
+    <div className="my-20 p-10 flex flex-col min-h-screen">
       <p className="text-2xl font-bold">React Hooksって何？</p>
       <hr />
       <p className="mt-5">

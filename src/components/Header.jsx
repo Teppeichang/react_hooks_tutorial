@@ -16,8 +16,8 @@ const Header = () => {
   }
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky" sx={{ backgroundColor: "black", p: 1 }}>
+    <Box sx={{ display: "flex", flexGrow: 1 }}>
+      <AppBar className="sticky" sx={{ backgroundColor: "black", p: 1 }}>
         <Toolbar variant="dense">
           <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleToggle} sx={{ mr: 2 }}>
             <FaReact className="text-sky-400" />

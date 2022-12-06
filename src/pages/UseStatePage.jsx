@@ -17,11 +17,9 @@ const UseStatePage = () => {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
-      <p className="text-2xl mb-10">React Hooks Tutorial : useState</p>
+      <p className="text-2xl mb-10">useState</p>
       <div className="flex">
-        <button type="button" className="px-4 font-medium text-center text-white bg-blue-700 mr-5">
-          A
-        </button>
+        <button type="button" className="px-4 font-medium text-center text-white bg-blue-700 mr-5">A</button>
         <button className="px-10 py-2.5 font-medium text-center bg-white border border-black rounded-lg">
           <span className="ml-2 w-4 h-4 font-semibold">Count:{count}</span>
         </button>
@@ -34,9 +32,7 @@ const UseStatePage = () => {
         </button>
       </div>
       <div className="flex mt-5 mb-20">
-        <button type="button" className="px-4 font-medium text-center text-white bg-red-600 mr-5">
-          B
-        </button>
+        <button type="button" className="px-4 font-medium text-center text-white bg-red-600 mr-5">B</button>
         <button className="px-10 py-2.5 font-medium text-center bg-white border border-black rounded-lg">
           <span className="ml-2 w-4 h-4 font-semibold">Count:{count_2}</span>
         </button>

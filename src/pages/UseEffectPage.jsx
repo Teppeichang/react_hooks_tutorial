@@ -1,6 +1,6 @@
 const UseEffectPage = () => {
   return (
-    <div>
+    <div className="my-20">
       <h1>Coming soon...</h1>
     </div>
   )
