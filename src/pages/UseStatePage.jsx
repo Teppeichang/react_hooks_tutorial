@@ -16,7 +16,7 @@ const UseStatePage = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center mt-10">
+    <div className="flex flex-col justify-center items-center min-h-screen">
       <p className="text-2xl mb-10">React Hooks Tutorial : useState</p>
       <div className="flex">
         <button type="button" className="px-4 font-medium text-center text-white bg-blue-700 mr-5">
