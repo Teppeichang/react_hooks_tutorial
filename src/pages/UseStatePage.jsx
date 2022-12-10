@@ -44,7 +44,7 @@ const UseStatePage = () => {
           ＋
         </button>
       </div>
-      <Box sx={{width: 800}}>
+      <Box sx={{width: 800, mb: 10}}>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>A と B の違いは？</Typography>
@@ -81,11 +81,11 @@ const UseStatePage = () => {
                 <br />
                 const CountComponent = () => {'{'}
                 <br />
-                const [count, setCount] = useState(0);
+                <p className="ml-5">const [count, setCount] = useState(0);</p>
                 <br />
-                const handleClick = () => {'{'}
+                <p className="ml-5">const handleClick = () ={'>'} {'{'}</p>
                 <br />
-                <p className="ml-5">count + 1;</p>
+                <p className="ml-10">count + 1;</p>
                 {'}'}
                 <br />
                 <br />
