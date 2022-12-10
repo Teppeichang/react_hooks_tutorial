@@ -1,6 +1,6 @@
 const Top = () => {
   return (
-    <div className="my-20 p-10">
+    <div className="my-20 p-10 min-h-screen">
       <p className="text-2xl font-bold">React Hooks Tutorialへようこそ</p>
       <hr />
       <p className="mt-5">
