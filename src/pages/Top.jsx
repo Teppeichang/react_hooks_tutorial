@@ -5,7 +5,7 @@ const Top = () => {
       <hr />
       <p className="mt-5">
         本チュートリアルでは、React ver16.8から実装されたReact
-        Hooksのうち、組み込みの7種類のフックについて実例を用いて解説を行います。
+        Hooksのうち、組み込みのフックで使用頻度の高いものについて実例を用いて解説を行います。
       </p>
       <p className="text-2xl font-bold mt-10">ご注意事項</p>
       <hr />
