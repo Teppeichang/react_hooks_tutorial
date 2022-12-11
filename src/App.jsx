@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Top from "./pages/Top";
 import AboutHooks from "./pages/AboutHooks";
+import AboutES6 from "./pages/AboutES6";
 import DestructuringAssignment from "./pages/DestructuringAssignment";
 import UseStatePage from "./pages/UseStatePage";
 import UseEffectPage from "./pages/UseEffectPage";
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Top />} />
         <Route path="/about-hooks" element={<AboutHooks />}/>
+        <Route path="/about-es6" element={<AboutES6 />}/>
         <Route path="/destructing-assignment" element={<DestructuringAssignment />}/>
         <Route path="/usestate" element={<UseStatePage />} />
         <Route path="/useeffect" element={<UseEffectPage />} />
