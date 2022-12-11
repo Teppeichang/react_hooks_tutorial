@@ -32,6 +32,9 @@ const Header = () => {
           <Link to="/about-hooks" className="hover:text-sky-400 hover:underline">
             React Hooksとは？
           </Link>
+          <Link to="/destructing-assignment" className="hover:text-sky-400 hover:underline">
+            分割代入
+          </Link>
           <Link to="/usestate" className="hover:text-sky-400 hover:underline">
             useState
           </Link>

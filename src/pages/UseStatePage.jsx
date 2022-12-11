@@ -84,8 +84,7 @@ const UseStatePage = () => {
                 <p className="ml-5">const [count, setCount] = useState(0);</p>
                 <br />
                 <p className="ml-5">const handleClick = () ={'>'} {'{'}</p>
-                <br />
-                <p className="ml-10">count + 1;</p>
+                <p className="ml-10">setCount(count + 1);</p>
                 {'}'}
                 <br />
                 <br />
@@ -133,11 +132,9 @@ const UseStatePage = () => {
                 <br />
                 const CountComponent = () => {'{'}
                 <br />
-                const [count, setCount] = useState(0);
-                <br />
-                const handleClick = () => {'{'}
-                <br />
-                <p className="ml-5">count + 1;</p>
+                <p className="ml-5">const [count, setCount] = useState(0);</p>
+                <p className="ml-5">const handleClick = () => {'{'}</p>
+                <p className="ml-10">setCount(count + 1);</p>
                 {'}'}
                 <br />
                 <br />
