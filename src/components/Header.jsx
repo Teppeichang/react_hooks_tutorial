@@ -32,6 +32,9 @@ const Header = () => {
           <Link to="/about-hooks" className="hover:text-sky-400 hover:underline">
             React Hooksとは？
           </Link>
+          <Link to="/about-es6" className="hover:text-sky-400 hover:underline">
+            React Hooks解説の前に: ES6の記法を抑えよう
+          </Link>
           <Link to="/destructing-assignment" className="hover:text-sky-400 hover:underline">
             分割代入
           </Link>

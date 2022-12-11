@@ -30,11 +30,11 @@ const DestructuringAssignment = () => {
         <hr />
         <p className="mt-5">配列の分割代入</p>
         <code className="bg-slate-200 block mt-5 mb-5 p-5">
-          /* 分割代入 */ <br />
+          # 分割代入<br />
           let [name, age, gender] = ["山田太郎", 25, "男"]; <br />
           console.log(name, age, gender); ={'>'} "山田太郎", 25, "男" <br />
           <br />
-          /* Not分割代入 */ <br />
+          # Not分割代入<br />
           let array = ['山田太郎', 25, '男']; <br />
           let name = array[0]; <br />
           let age = array[1]; <br />
@@ -43,13 +43,13 @@ const DestructuringAssignment = () => {
         </code>
         <p>変数を入れ替える</p>
         <code className="bg-slate-200 block mt-5 mb-5 p-5">
-          /* 分割代入 */ <br />
+          # 分割代入<br />
           let str_a = 'チキン'; <br />
           let str_b = '南蛮'; <br />
           [str_a, str_b] = [str_b, str_a]; <br />
           console.log(str_a + str_b); ={'>'} 南蛮チキン <br />
           <br />
-          /* Not分割代入 */ <br />
+          # Not分割代入<br />
           let str_a = 'チキン'; <br />
           let str_b = '南蛮'; <br />
           let hoge = str_a; <br />
