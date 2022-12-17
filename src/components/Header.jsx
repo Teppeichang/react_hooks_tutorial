@@ -29,19 +29,22 @@ const Header = () => {
       </AppBar>
       <Drawer sx={{ width: 400 }} variant="temporary" open={open} onClose={handleToggle}>
         <List sx={{ display: "flex", flexDirection: "column", p: 2, lineHeight: 3 }}>
+          <Link to="/about-es6" className="hover:text-sky-400 hover:underline">
+            React Hooks解説の前に: ES6を知ろう
+          </Link>
+          <Link to="/let-and-const" className="hover:text-sky-400 hover:underline pl-5">
+            let と const
+          </Link>
+          <Link to="/destructing-assignment" className="hover:text-sky-400 hover:underline pl-5">
+            分割代入
+          </Link>
           <Link to="/about-hooks" className="hover:text-sky-400 hover:underline">
             React Hooksとは？
           </Link>
-          <Link to="/about-es6" className="hover:text-sky-400 hover:underline">
-            React Hooks解説の前に: ES6の記法を抑えよう
-          </Link>
-          <Link to="/destructing-assignment" className="hover:text-sky-400 hover:underline">
-            分割代入
-          </Link>
-          <Link to="/usestate" className="hover:text-sky-400 hover:underline">
+          <Link to="/usestate" className="hover:text-sky-400 hover:underline pl-5">
             useState
           </Link>
-          <Link to="/useeffect" className="hover:text-sky-400 hover:underline">
+          <Link to="/useeffect" className="hover:text-sky-400 hover:underline pl-5">
             useEffect
           </Link>
         </List>
