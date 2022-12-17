@@ -67,6 +67,12 @@ const DestructuringAssignment = () => {
           console.log(a); ={'>'} バナナ <br />
           console.log(b); ={'>'} メロン
         </code>
+        <p>デフォルト値を指定する(=デフォルト値を指定すると、右辺で要素が足りない時に補ってくれる。)</p>
+        <code className="bg-slate-200 block mt-5 mb-5 p-5">
+          let fruitList = ['バナナ', 'りんご', 'メロン']; <br />
+          let [fruit_1, fruit_2, fruit_3, fruit_4 = 'みかん'] = fruitList; <br />
+          console.log(fruit_1, fruit_2, fruit_3, fruit_4); ={'>'} バナナ, りんご, メロン, みかん
+        </code>
       </div>
     </div>
   );
