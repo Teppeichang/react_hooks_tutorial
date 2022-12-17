@@ -23,7 +23,7 @@ const Header = () => {
             <FaReact className="text-sky-400" />
           </IconButton>
           <Typography variant="h6" color="inherit">
-            <Link to="/">React Hooks Tutorial</Link>
+            <Link to="/">Hook into React - React Hooksチュートリアル</Link>
           </Typography>
         </Toolbar>
       </AppBar>
