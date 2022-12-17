@@ -37,6 +37,11 @@ const Top = () => {
           </a>
         </li>
         <li>
+          <a href="https://note.affi-sapo-sv.com/js-split-assignment.php#title4" className="text-decoration: underline">
+            分割代入はどこが便利なのか - けーちゃんのプログラム開発ノート(運営: 金澤忍 様)
+          </a>
+        </li>
+        <li>
           <a href="https://ja.reactjs.org/docs/hooks-intro.html#motivation" className="text-decoration: underline">
             フックの導入 - React公式ドキュメント
           </a>
