@@ -19,7 +19,7 @@ const Top = () => {
           </li>
         </ul>
         <li>
-          プログラミングスクール生やその関係者による盗用防止の観点から、本チュートリアルのソースコードについては原則非公開とさせていただきます。ご了承ください。
+          プログラミングスクール生・関係者による盗用防止の観点から、本チュートリアルのソースコードのCloneおよびForkついては原則禁止とさせていただきます。ご了承ください。
         </li>
         <li>
           カスタムフックに関する解説については検討中です。（ユーザー定義フックということで、触れ出すとキリがないので。）
@@ -34,6 +34,11 @@ const Top = () => {
           <a href="https://www.youtube.com/watch?v=uuAdVs7sbAs&t=208s" className="text-decoration: underline">
             【React Hooks入門】完全初心者OK！8種類のHooksを学んでReactの理解を深めよう -
             YouTubeチャンネル: プログラミングチュートリアル 様
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tohoho-web.com/js/what.htm" className="text-decoration: underline">
+            JavaScriptって何? - とほほのJavaScriptリファレンス
           </a>
         </li>
         <li>

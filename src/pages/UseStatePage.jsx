@@ -16,7 +16,7 @@ const UseStatePage = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <div className="flex flex-col justify-center items-center min-h-screen mt-20">
       <p className="text-2xl mb-10">useState</p>
       <div className="flex">
         <button type="button" className="px-4 font-medium text-center text-white bg-blue-700 mr-5">A</button>
