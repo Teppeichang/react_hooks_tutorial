@@ -8,6 +8,7 @@ import LetAndConst from "./pages/LetAndConst";
 import DestructuringAssignment from "./pages/DestructuringAssignment";
 import UseStatePage from "./pages/UseStatePage";
 import UseEffectPage from "./pages/UseEffectPage";
+import References from "./pages/References";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/about-hooks" element={<AboutHooks />}/>
         <Route path="/usestate" element={<UseStatePage />} />
         <Route path="/useeffect" element={<UseEffectPage />} />
+        <Route path="/references" element={<References />} />
       </Routes>
       <Footer />
     </BrowserRouter>
