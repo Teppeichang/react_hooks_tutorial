@@ -23,26 +23,32 @@ const Header = () => {
             <FaReact className="text-sky-400" />
           </IconButton>
           <Typography variant="h6" color="inherit">
-            <Link to="/">React Hooks Tutorial</Link>
+            <Link to="/">Hook into React - React Hooksチュートリアル</Link>
           </Typography>
         </Toolbar>
       </AppBar>
       <Drawer sx={{ width: 400 }} variant="temporary" open={open} onClose={handleToggle}>
         <List sx={{ display: "flex", flexDirection: "column", p: 2, lineHeight: 3 }}>
+          <Link to="/about-es6" className="hover:text-sky-400 hover:underline">
+            React Hooks解説の前に: ES6を知ろう
+          </Link>
+          <Link to="/let-and-const" className="hover:text-sky-400 hover:underline pl-5">
+            let と const
+          </Link>
+          <Link to="/destructing-assignment" className="hover:text-sky-400 hover:underline pl-5">
+            分割代入
+          </Link>
           <Link to="/about-hooks" className="hover:text-sky-400 hover:underline">
             React Hooksとは？
           </Link>
-          <Link to="/about-es6" className="hover:text-sky-400 hover:underline">
-            React Hooks解説の前に: ES6の記法を抑えよう
-          </Link>
-          <Link to="/destructing-assignment" className="hover:text-sky-400 hover:underline">
-            分割代入
-          </Link>
-          <Link to="/usestate" className="hover:text-sky-400 hover:underline">
+          <Link to="/usestate" className="hover:text-sky-400 hover:underline pl-5">
             useState
           </Link>
-          <Link to="/useeffect" className="hover:text-sky-400 hover:underline">
+          <Link to="/useeffect" className="hover:text-sky-400 hover:underline pl-5">
             useEffect
+          </Link>
+          <Link to="/references" className="hover:text-sky-400 hover:underline">
+          参考記事
           </Link>
         </List>
       </Drawer>

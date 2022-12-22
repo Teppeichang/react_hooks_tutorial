@@ -19,37 +19,10 @@ const Top = () => {
           </li>
         </ul>
         <li>
-          プログラミングスクール生やその関係者による盗用防止の観点から、本チュートリアルのソースコードについては原則非公開とさせていただきます。ご了承ください。
+          プログラミングスクール生・関係者による盗用防止の観点から、本チュートリアルのソースコードのCloneおよびForkついては原則禁止とさせていただきます。ご了承ください。
         </li>
         <li>
-          カスタムフックに関する解説については検討中です。（ユーザー定義フックということで、触れ出すとキリがないので。）
-        </li>
-      </ul>
-      <p className="text-2xl font-bold mt-10">
-        本チュートリアル作成にあたって参考にさせていただいたページ等
-      </p>
-      <hr />
-      <ul className="list-disc list-inside mt-5 pl-2 leading-8">
-        <li>
-          <a href="https://www.youtube.com/watch?v=uuAdVs7sbAs&t=208s" className="text-decoration: underline">
-            【React Hooks入門】完全初心者OK！8種類のHooksを学んでReactの理解を深めよう -
-            YouTubeチャンネル: プログラミングチュートリアル 様
-          </a>
-        </li>
-        <li>
-          <a href="https://ja.reactjs.org/docs/hooks-intro.html#motivation" className="text-decoration: underline">
-            フックの導入 - React公式ドキュメント
-          </a>
-        </li>
-        <li>
-          <a href="https://ja.reactjs.org/docs/hooks-overview.html" className="text-decoration: underline">
-            フック早わかり - React公式ドキュメント
-          </a>
-        </li>
-        <li>
-          <a href="https://ja.reactjs.org/docs/hooks-state.html" className="text-decoration: underline">
-            ステートフックの利用法 - React公式ドキュメント
-          </a>
+          カスタムフックに関する解説については検討中です。（react-router-domやReact Hook Form、window.onloadに関するフックは解説予定）
         </li>
       </ul>
     </div>
