@@ -11,12 +11,12 @@ import { Box } from "@mui/system";
 const UseEffectPage = () => {
   const [count, setCount] = useState(0);
 
-  // useEffect(() => {
-  //   Swal.fire({
-  //     title: 'useEffectの解説ページです!',
-  //     showConfirmButton: false,
-  //   })
-  // }, [])
+  useEffect(() => {
+    Swal.fire({
+      title: 'useEffectの解説ページです!',
+      showConfirmButton: false,
+    })
+  }, [])
 
   useEffect(() => {
     if(count === 10){
