@@ -47,6 +47,9 @@ const Header = () => {
           <Link to="/useeffect" className="hover:text-sky-400 hover:underline pl-5">
             useEffect
           </Link>
+          <Link to="/glossary" className="hover:text-sky-400 hover:underline">
+          React用語集
+          </Link>
           <Link to="/references" className="hover:text-sky-400 hover:underline">
           参考記事
           </Link>

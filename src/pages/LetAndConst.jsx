@@ -1,6 +1,6 @@
 const LetAndConst = () => {
   return (
-    <div className="my-20 p-10 min-h-screen">
+    <div className="my-20 px-10 flex flex-col min-h-screen">
       <p className="text-2xl font-bold mt-10">let と constとは</p>
       <hr />
       <p className="mt-5">ES6から追加されたJavaScriptの変数宣言。JavaScriptの変数宣言は3通りあり、それぞれ以下の特徴がある。</p>
