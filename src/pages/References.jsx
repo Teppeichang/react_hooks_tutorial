@@ -35,6 +35,11 @@ const References = () => {
           </a>
         </li>
         <li>
+          <a href="https://dimzakki.com/javascript-var/" className="text-decoration: underline">
+          変数varは使わない方が良い理由(Dim雑記 様)
+          </a>
+        </li>
+        <li>
           <a href="https://ja.reactjs.org/docs/hooks-intro.html#motivation" className="text-decoration: underline">
             フックの導入 - React公式ドキュメント
           </a>
