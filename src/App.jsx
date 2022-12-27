@@ -6,6 +6,7 @@ import AboutHooks from "./pages/AboutHooks";
 import AboutES6 from "./pages/AboutES6";
 import LetAndConst from "./pages/LetAndConst";
 import DestructuringAssignment from "./pages/DestructuringAssignment";
+import SpreadSyntax from "./pages/SpreadSyntax";
 import UseStatePage from "./pages/UseStatePage";
 import UseEffectPage from "./pages/UseEffectPage";
 import Glossary from "./pages/Glossary";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about-es6" element={<AboutES6 />}/>
         <Route path="/let-and-const" element={<LetAndConst />}/>
         <Route path="/destructing-assignment" element={<DestructuringAssignment />}/>
+        <Route path="/spread-syntax" element={<SpreadSyntax />}/>
         <Route path="/about-hooks" element={<AboutHooks />}/>
         <Route path="/usestate" element={<UseStatePage />} />
         <Route path="/useeffect" element={<UseEffectPage />} />
