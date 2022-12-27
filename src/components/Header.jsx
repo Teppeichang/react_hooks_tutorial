@@ -38,6 +38,9 @@ const Header = () => {
           <Link to="/destructing-assignment" className="hover:text-sky-400 hover:underline pl-5">
             分割代入
           </Link>
+          <Link to="/spread-syntax" className="hover:text-sky-400 hover:underline pl-5">
+            スプレッド構文
+          </Link>
           <Link to="/about-hooks" className="hover:text-sky-400 hover:underline">
             React Hooksとは？
           </Link>
@@ -48,7 +51,7 @@ const Header = () => {
             useEffect
           </Link>
           <Link to="/glossary" className="hover:text-sky-400 hover:underline">
-          React用語集
+          🚧 React用語集
           </Link>
           <Link to="/references" className="hover:text-sky-400 hover:underline">
           参考記事

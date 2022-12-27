@@ -2,7 +2,7 @@ import React from 'react'
 
 const References = () => {
   return (
-    <div className='my-20 p-10 min-h-screen'>
+    <div className='my-20 px-10 flex flex-col min-h-screen'>
       <p className="text-2xl font-bold mt-10">
         本チュートリアル作成にあたって参考にさせていただいた記事
       </p>
