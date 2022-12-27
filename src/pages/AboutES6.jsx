@@ -26,10 +26,9 @@ const AboutES6 = () => {
       <p className="mt-5 font-bold">結論: ES6からES6以前にはなかった機能が追加され、従来のJavaScriptより格段にコーディングしやすくなったため。</p>
       <p className="mt-5">ES6で追加された機能は以下の通り(使用頻度が高いものや、Reactのコードでよく見られるものを抜粋)</p>
       <code className="bg-slate-200 block mt-5 mb-5 p-5">
-        局所変数 (let)<br />
-        定数 (const)<br />
+        let,constによる変数宣言<br />
         クラス (class)<br />
-        テンプレート文字列 (`Hello ${ }`)<br />
+        テンプレート文字列 (`Hello ${'{'}変数名{'}'}`)<br />
         モジュール (import, export)<br />
         アロー関数 (={'>'})<br />
         スプレッド構文 (...args)<br />
