@@ -24,6 +24,7 @@ const UseRefPage = () => {
     if (isTextRefExists) {
       const isTextValid = isTextRefExists.validity.valid;
       setTextError(!isTextValid);
+      // eslint-disable-next-line
       valid &&= isTextValid;
     }
   };
