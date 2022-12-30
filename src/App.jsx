@@ -9,6 +9,7 @@ import DestructuringAssignment from "./pages/DestructuringAssignment";
 import SpreadSyntax from "./pages/SpreadSyntax";
 import UseStatePage from "./pages/UseStatePage";
 import UseEffectPage from "./pages/UseEffectPage";
+import UseRefPage from "./pages/UseRefPage";
 import Glossary from "./pages/Glossary";
 import References from "./pages/References";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/about-hooks" element={<AboutHooks />}/>
         <Route path="/usestate" element={<UseStatePage />} />
         <Route path="/useeffect" element={<UseEffectPage />} />
+        <Route path="/useref" element={<UseRefPage />} />
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/references" element={<References />} />
       </Routes>
