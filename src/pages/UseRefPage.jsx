@@ -113,7 +113,7 @@ const UseRefPage = () => {
                 label="useState Form"
                 value={useStateText}
                 onChange={(event) => setUseStateText(event.target.value)}
-                sx={{ mt: 5, mx: 1 }}
+                sx={{ mt: 5 }}
               />
               <p className="ml-1 mb-5">Text: {useStateText}</p>
               <TextField label="useRef Form" inputRef={textRef} sx={{ m: 1 }} />

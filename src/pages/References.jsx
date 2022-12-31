@@ -21,12 +21,22 @@ const References = () => {
         </li>
         <li>
           <a href="https://note.affi-sapo-sv.com/js-split-assignment.php#title4" className="text-decoration: underline">
-            分割代入はどこが便利なのか - けーちゃんのプログラム開発ノート(運営: 金澤忍 様)
+            分割代入はどこが便利なのか - (けーちゃんのプログラム開発ノート 様)
           </a>
         </li>
         <li>
           <a href="https://qiita.com/cheez921/items/f3ff76865f943345107c" className="text-decoration: underline">
             【React】useEffectの基本的な使い方・活用術・注意点 - Qiita(cheez921 様)
+          </a>
+        </li>
+        <li>
+          <a href="https://reffect.co.jp/react/react-hook-useref#useStateuseRef" className="text-decoration: underline">
+            初心者にもわかるReact HookのuseRefの使い方(アールエフェクト 様)
+          </a>
+        </li>
+        <li>
+          <a href="https://qiita.com/seira/items/0e6a2d835f1afb50544d#useref%E3%81%A8usestate%E3%82%92%E3%81%8F%E3%82%89%E3%81%B9%E3%81%A6%E3%81%BF%E3%82%8B" className="text-decoration: underline">
+          React hooksを基礎から理解する (useRef編) - Qiita(seira 様)
           </a>
         </li>
         <li>
@@ -47,6 +57,11 @@ const References = () => {
         <li>
           <a href="https://ja.reactjs.org/docs/hooks-overview.html" className="text-decoration: underline">
             フック早わかり - React公式ドキュメント
+          </a>
+        </li>
+        <li>
+          <a href="https://ja.reactjs.org/docs/hooks-reference.html" className="text-decoration: underline">
+            フックAPIリファレンス - React公式ドキュメント
           </a>
         </li>
         <li>
