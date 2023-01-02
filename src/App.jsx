@@ -5,9 +5,11 @@ import Top from "./pages/Top";
 import AboutHooks from "./pages/AboutHooks";
 import AboutES6 from "./pages/AboutES6";
 import LetAndConst from "./pages/LetAndConst";
+import TemplateLiterals from "./pages/TemplateLiterals";
 import AllowFunction from "./pages/AllowFunction";
 import DestructuringAssignment from "./pages/DestructuringAssignment";
 import SpreadSyntax from "./pages/SpreadSyntax";
+import ConditionalOperator from "./pages/ConditionalOperator";
 import UseStatePage from "./pages/UseStatePage";
 import UseEffectPage from "./pages/UseEffectPage";
 import UseRefPage from "./pages/UseRefPage";
@@ -22,9 +24,11 @@ function App() {
         <Route path="/" element={<Top />} />
         <Route path="/about-es6" element={<AboutES6 />}/>
         <Route path="/let-and-const" element={<LetAndConst />}/>
+        <Route path="/template-literals" element={<TemplateLiterals />}/>
         <Route path="/allow-function" element={<AllowFunction />}/>
         <Route path="/destructing-assignment" element={<DestructuringAssignment />}/>
         <Route path="/spread-syntax" element={<SpreadSyntax />}/>
+        <Route path="/conditional-operator" element={<ConditionalOperator />}/>
         <Route path="/about-hooks" element={<AboutHooks />}/>
         <Route path="/usestate" element={<UseStatePage />} />
         <Route path="/useeffect" element={<UseEffectPage />} />

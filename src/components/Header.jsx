@@ -35,6 +35,9 @@ const Header = () => {
           <Link to="/let-and-const" className="hover:text-sky-400 hover:underline pl-5">
             let と const
           </Link>
+          <Link to="/template-literals" className="hover:text-sky-400 hover:underline pl-5">
+            テンプレート文字列
+          </Link>
           <Link to="/allow-function" className="hover:text-sky-400 hover:underline pl-5">
             アロー関数
           </Link>
@@ -43,6 +46,9 @@ const Header = () => {
           </Link>
           <Link to="/spread-syntax" className="hover:text-sky-400 hover:underline pl-5">
             スプレッド構文
+          </Link>
+          <Link to="/conditional-operator" className="hover:text-sky-400 hover:underline pl-5">
+            おまけ: 三項演算子
           </Link>
           <Link to="/about-hooks" className="hover:text-sky-400 hover:underline">
             React Hooksとは？
