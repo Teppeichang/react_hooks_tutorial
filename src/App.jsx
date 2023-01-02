@@ -5,6 +5,7 @@ import Top from "./pages/Top";
 import AboutHooks from "./pages/AboutHooks";
 import AboutES6 from "./pages/AboutES6";
 import LetAndConst from "./pages/LetAndConst";
+import TemplateLiterals from "./pages/TemplateLiterals";
 import AllowFunction from "./pages/AllowFunction";
 import DestructuringAssignment from "./pages/DestructuringAssignment";
 import SpreadSyntax from "./pages/SpreadSyntax";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Top />} />
         <Route path="/about-es6" element={<AboutES6 />}/>
         <Route path="/let-and-const" element={<LetAndConst />}/>
+        <Route path="/template-literals" element={<TemplateLiterals />}/>
         <Route path="/allow-function" element={<AllowFunction />}/>
         <Route path="/destructing-assignment" element={<DestructuringAssignment />}/>
         <Route path="/spread-syntax" element={<SpreadSyntax />}/>

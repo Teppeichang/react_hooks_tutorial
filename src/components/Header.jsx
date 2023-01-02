@@ -35,6 +35,9 @@ const Header = () => {
           <Link to="/let-and-const" className="hover:text-sky-400 hover:underline pl-5">
             let と const
           </Link>
+          <Link to="/template-literals" className="hover:text-sky-400 hover:underline pl-5">
+            テンプレート文字列
+          </Link>
           <Link to="/allow-function" className="hover:text-sky-400 hover:underline pl-5">
             アロー関数
           </Link>
