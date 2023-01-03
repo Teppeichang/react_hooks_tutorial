@@ -41,6 +41,9 @@ const Header = () => {
           <Link to="/allow-function" className="hover:text-sky-400 hover:underline pl-5">
             アロー関数
           </Link>
+          <Link to="/default-parameters" className="hover:text-sky-400 hover:underline pl-5">
+            関数のデフォルト引数
+          </Link>
           <Link to="/destructing-assignment" className="hover:text-sky-400 hover:underline pl-5">
             分割代入
           </Link>
