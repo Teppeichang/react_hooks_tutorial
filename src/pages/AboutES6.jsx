@@ -40,7 +40,7 @@ const AboutES6 = () => {
         <br />
         分割代入 ([x, y] = [10, 20])
         <br />
-        デフォルト引数 (function(x=0, y=0))
+        関数のデフォルト引数 (function(x=0, y=0))
         <br />
         Mapオブジェクト・mapメソッド
       </code>

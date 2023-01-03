@@ -7,6 +7,7 @@ import AboutES6 from "./pages/AboutES6";
 import LetAndConst from "./pages/LetAndConst";
 import TemplateLiterals from "./pages/TemplateLiterals";
 import AllowFunction from "./pages/AllowFunction";
+import DefaultParaeters from "./pages/DefaultParaeters";
 import DestructuringAssignment from "./pages/DestructuringAssignment";
 import SpreadSyntax from "./pages/SpreadSyntax";
 import ConditionalOperator from "./pages/ConditionalOperator";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/let-and-const" element={<LetAndConst />}/>
         <Route path="/template-literals" element={<TemplateLiterals />}/>
         <Route path="/allow-function" element={<AllowFunction />}/>
+        <Route path="/default-parameters" element={<DefaultParaeters />}/>
         <Route path="/destructing-assignment" element={<DestructuringAssignment />}/>
         <Route path="/spread-syntax" element={<SpreadSyntax />}/>
         <Route path="/conditional-operator" element={<ConditionalOperator />}/>
