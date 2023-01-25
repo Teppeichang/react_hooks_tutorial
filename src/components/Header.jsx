@@ -48,45 +48,45 @@ const Header = () => {
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ mx: 2 }} />}>
-              <Link to="/about-es6" className="hover:text-sky-400 hover:underline">
+              <Link to="es6/about" className="hover:text-sky-400 hover:underline">
                 React Hooks解説の前に: ES6を知ろう
               </Link>
             </AccordionSummary>
             <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
-              <Link to="/let-and-const" className="hover:text-sky-400 hover:underline pl-5">
+              <Link to="es6/let-and-const" className="hover:text-sky-400 hover:underline pl-5">
                 let と const
               </Link>
-              <Link to="/template-literals" className="hover:text-sky-400 hover:underline pl-5">
+              <Link to="es6/template-literals" className="hover:text-sky-400 hover:underline pl-5">
                 テンプレート文字列
               </Link>
-              <Link to="/allow-function" className="hover:text-sky-400 hover:underline pl-5">
+              <Link to="es6/allow-function" className="hover:text-sky-400 hover:underline pl-5">
                 アロー関数
               </Link>
-              <Link to="/default-parameters" className="hover:text-sky-400 hover:underline pl-5">
+              <Link to="es6/default-parameters" className="hover:text-sky-400 hover:underline pl-5">
                 関数のデフォルト引数
               </Link>
               <Link
-                to="/destructing-assignment"
+                to="es6/destructing-assignment"
                 className="hover:text-sky-400 hover:underline pl-5"
               >
                 分割代入
               </Link>
-              <Link to="/spread-syntax" className="hover:text-sky-400 hover:underline pl-5">
+              <Link to="es6/spread-syntax" className="hover:text-sky-400 hover:underline pl-5">
                 スプレッド構文
               </Link>
               <Link
-                to="/promise-object"
+                to="es6/promise-object"
                 className="hover:text-sky-400 hover:underline pl-5"
               >
                 Promiseによる非同期処理
               </Link>
               <Link
-                to="/async-and-await"
+                to="es6/async-and-await"
                 className="hover:text-sky-400 hover:underline pl-5"
               >
-                async / await
+                🚧 async / await
               </Link>
-              <Link to="/conditional-operator" className="hover:text-sky-400 hover:underline pl-5">
+              <Link to="es6/appendix/conditional-operator" className="hover:text-sky-400 hover:underline pl-5">
                 おまけ: 三項演算子
               </Link>
             </AccordionDetails>
@@ -100,18 +100,18 @@ const Header = () => {
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ mx: 2 }} />}>
-              <Link to="/about-hooks" className="hover:text-sky-400 hover:underline">
+              <Link to="hooks/about" className="hover:text-sky-400 hover:underline">
                 React Hooksとは？
               </Link>
             </AccordionSummary>
             <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
-              <Link to="/usestate" className="hover:text-sky-400 hover:underline pl-5">
+              <Link to="hooks/usestate" className="hover:text-sky-400 hover:underline pl-5">
                 useState
               </Link>
-              <Link to="/useeffect" className="hover:text-sky-400 hover:underline pl-5">
+              <Link to="hooks/useeffect" className="hover:text-sky-400 hover:underline pl-5">
                 useEffect
               </Link>
-              <Link to="/useref" className="hover:text-sky-400 hover:underline pl-5">
+              <Link to="hooks/useref" className="hover:text-sky-400 hover:underline pl-5">
                 useRef
               </Link>
             </AccordionDetails>
