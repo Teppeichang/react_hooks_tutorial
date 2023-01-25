@@ -10,11 +10,13 @@ import AllowFunction from "./pages/AllowFunction";
 import DefaultParaeters from "./pages/DefaultParaeters";
 import DestructuringAssignment from "./pages/DestructuringAssignment";
 import SpreadSyntax from "./pages/SpreadSyntax";
+import PromiseObject from "./pages/PromiseObject";
+import AsyncAndAwait from "./pages/AsyncAndAwait";
 import ConditionalOperator from "./pages/ConditionalOperator";
 import UseStatePage from "./pages/UseStatePage";
 import UseEffectPage from "./pages/UseEffectPage";
 import UseRefPage from "./pages/UseRefPage";
-import Glossary from "./pages/Glossary";
+import Glossaries from "./pages/Glossaries";
 import References from "./pages/References";
 
 function App() {
@@ -30,12 +32,14 @@ function App() {
         <Route path="/default-parameters" element={<DefaultParaeters />}/>
         <Route path="/destructing-assignment" element={<DestructuringAssignment />}/>
         <Route path="/spread-syntax" element={<SpreadSyntax />}/>
+        <Route path="/promise-object" element={<PromiseObject />}/>
+        <Route path="/async-and-await" element={<AsyncAndAwait />}/>
         <Route path="/conditional-operator" element={<ConditionalOperator />}/>
         <Route path="/about-hooks" element={<AboutHooks />}/>
         <Route path="/usestate" element={<UseStatePage />} />
         <Route path="/useeffect" element={<UseEffectPage />} />
         <Route path="/useref" element={<UseRefPage />} />
-        <Route path="/glossary" element={<Glossary />} />
+        <Route path="/glossaries" element={<Glossaries />} />
         <Route path="/references" element={<References />} />
       </Routes>
       <Footer />

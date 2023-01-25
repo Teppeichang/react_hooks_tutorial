@@ -11,12 +11,7 @@ const Top = () => {
       <hr />
       <p className="mt-5">内容は随時アップデートしております。</p>
       <ul className="list-disc list-inside pl-2 mt-5 leading-8">
-        <li>ES6解説</li>
-        <ul className="list-decimal list-inside pl-2 leading-8">
-          <li>let, const</li>
-          <li>分割代入</li>
-          <li>スプレッド構文...and more</li>
-        </ul>
+        <li>ES6解説 + おまけ</li>
         <li className="mt-5">React Hooks解説</li>
         <ul className="list-decimal list-inside pl-2 leading-8">
           <li>useState</li>
