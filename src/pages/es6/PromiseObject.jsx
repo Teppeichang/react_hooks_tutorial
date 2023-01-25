@@ -176,7 +176,7 @@ const PromiseAndAsyncAwait = () => {
       </p>
       <p>
         Promiseと同様の処理をしたいが、より簡潔に記述したいという場合は
-        <Link to="/async-and-await" className="font-bold hover:text-sky-400 hover:underline"> async /await </Link>
+        <Link to="es6/async-and-await" className="font-bold hover:text-sky-400 hover:underline"> async /await </Link>
         を使うとよい。
       </p>
     </div>
