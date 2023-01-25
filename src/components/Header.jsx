@@ -74,6 +74,18 @@ const Header = () => {
               <Link to="/spread-syntax" className="hover:text-sky-400 hover:underline pl-5">
                 スプレッド構文
               </Link>
+              <Link
+                to="/promise-object"
+                className="hover:text-sky-400 hover:underline pl-5"
+              >
+                Promiseによる非同期処理
+              </Link>
+              <Link
+                to="/async-and-await"
+                className="hover:text-sky-400 hover:underline pl-5"
+              >
+                async / await
+              </Link>
               <Link to="/conditional-operator" className="hover:text-sky-400 hover:underline pl-5">
                 おまけ: 三項演算子
               </Link>
@@ -104,21 +116,10 @@ const Header = () => {
               </Link>
             </AccordionDetails>
           </Accordion>
-          <Accordion
-            elevation={0}
-            sx={{
-              "&:before": {
-                display: "none",
-              },
-            }}
-          >
-            <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ mx: 2 }} />}>
-              <Link to="/glossary" className="hover:text-sky-400 hover:underline">
-                🚧 React用語集
-              </Link>
-            </AccordionSummary>
-          </Accordion>
-          <Link to="/references" className="hover:text-sky-400 hover:underline pl-4">
+          <Link to="/glossaries" className="hover:text-sky-400 hover:underline p-4">
+            🚧 React用語集
+          </Link>
+          <Link to="/references" className="hover:text-sky-400 hover:underline pl-4 py-2">
             参考記事
           </Link>
         </List>
