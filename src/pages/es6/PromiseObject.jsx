@@ -5,7 +5,7 @@ const PromiseAndAsyncAwait = () => {
     <div className="my-20 p-10 flex flex-col min-h-screen">
       <p className="text-2xl font-bold">Promiseとは</p>
       <hr />
-      <p className="mt-5">JavaScriptの処理実行をハンドリングするもの。</p>
+      <p className="mt-5">JavaScriptの非同期処理構文。非同期処理実行をハンドリングすることができる。</p>
       <p>
         Promiseを使ってJavaScriptの処理を実行することで、処理を待機したり、処理の実行結果によって次に控えている処理を実行することができる。
       </p>
