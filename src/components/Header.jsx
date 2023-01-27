@@ -84,7 +84,7 @@ const Header = () => {
                 to="es6/async-and-await"
                 className="hover:text-sky-400 hover:underline pl-5"
               >
-                🚧 async / await
+                async / await
               </Link>
               <Link to="es6/appendix/conditional-operator" className="hover:text-sky-400 hover:underline pl-5">
                 おまけ: 三項演算子
