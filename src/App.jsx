@@ -16,7 +16,9 @@ import ConditionalOperator from "./pages/es6/appendix/ConditionalOperator";
 import UseStatePage from "./pages/hooks/UseStatePage";
 import UseEffectPage from "./pages/hooks/UseEffectPage";
 import UseRefPage from "./pages/hooks/UseRefPage";
-import Glossaries from "./pages/Glossaries";
+import State from "./pages/glossaries/State";
+import Props from "./pages/glossaries/Props";
+import ReRender from "./pages/glossaries/ReRender";
 import References from "./pages/References";
 
 function App() {
@@ -39,7 +41,9 @@ function App() {
         <Route path="hooks/usestate" element={<UseStatePage />} />
         <Route path="hooks/useeffect" element={<UseEffectPage />} />
         <Route path="hooks/useref" element={<UseRefPage />} />
-        <Route path="/glossaries" element={<Glossaries />} />
+        <Route path="glossaries/state" element={<State />} />
+        <Route path="glossaries/props" element={<Props />} />
+        <Route path="glossaries/re-render" element={<ReRender />} />
         <Route path="/references" element={<References />} />
       </Routes>
       <Footer />
