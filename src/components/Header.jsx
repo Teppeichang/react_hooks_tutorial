@@ -74,19 +74,16 @@ const Header = () => {
               <Link to="es6/spread-syntax" className="hover:text-sky-400 hover:underline pl-5">
                 スプレッド構文
               </Link>
-              <Link
-                to="es6/promise-object"
-                className="hover:text-sky-400 hover:underline pl-5"
-              >
+              <Link to="es6/promise-object" className="hover:text-sky-400 hover:underline pl-5">
                 Promiseによる非同期処理
               </Link>
-              <Link
-                to="es6/async-and-await"
-                className="hover:text-sky-400 hover:underline pl-5"
-              >
+              <Link to="es6/async-and-await" className="hover:text-sky-400 hover:underline pl-5">
                 async / await
               </Link>
-              <Link to="es6/appendix/conditional-operator" className="hover:text-sky-400 hover:underline pl-5">
+              <Link
+                to="es6/appendix/conditional-operator"
+                className="hover:text-sky-400 hover:underline pl-5"
+              >
                 おまけ: 三項演算子
               </Link>
             </AccordionDetails>
@@ -116,9 +113,29 @@ const Header = () => {
               </Link>
             </AccordionDetails>
           </Accordion>
-          <Link to="/glossaries" className="hover:text-sky-400 hover:underline p-4">
-            🚧 React用語集
-          </Link>
+          <Accordion
+            elevation={0}
+            sx={{
+              "&:before": {
+                display: "none",
+              },
+            }}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ mx: 2 }} />}>
+              <p className="hover:text-sky-400 hover:underline">🚧 React用語集</p>
+            </AccordionSummary>
+            <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
+              <Link to="glossaries/state" className="hover:text-sky-400 hover:underline pl-5">
+                state
+              </Link>
+              <Link to="glossaries/props" className="hover:text-sky-400 hover:underline pl-5">
+                props
+              </Link>
+              <Link to="glossaries/re-render" className="hover:text-sky-400 hover:underline pl-5">
+                再レンダリング
+              </Link>
+            </AccordionDetails>
+          </Accordion>
           <Link to="/references" className="hover:text-sky-400 hover:underline pl-4 py-2">
             参考記事
           </Link>
