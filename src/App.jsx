@@ -16,6 +16,9 @@ import ConditionalOperator from "./pages/es6/appendix/ConditionalOperator";
 import UseStatePage from "./pages/hooks/UseStatePage";
 import UseEffectPage from "./pages/hooks/UseEffectPage";
 import UseRefPage from "./pages/hooks/UseRefPage";
+import UseContextPage from "./pages/hooks/UseContextPage";
+import UseCallbackPage from "./pages/hooks/UseCallbackPage";
+import UseMemoPage from "./pages/hooks/UseMemoPage";
 import State from "./pages/glossaries/State";
 import Props from "./pages/glossaries/Props";
 import ReRender from "./pages/glossaries/ReRender";
@@ -41,6 +44,9 @@ function App() {
         <Route path="hooks/usestate" element={<UseStatePage />} />
         <Route path="hooks/useeffect" element={<UseEffectPage />} />
         <Route path="hooks/useref" element={<UseRefPage />} />
+        <Route path="hooks/usecontext" element={<UseContextPage />} />
+        <Route path="hooks/usecallback" element={<UseCallbackPage />} />
+        <Route path="hooks/usememo" element={<UseMemoPage />} />
         <Route path="glossaries/state" element={<State />} />
         <Route path="glossaries/props" element={<Props />} />
         <Route path="glossaries/re-render" element={<ReRender />} />
