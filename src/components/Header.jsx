@@ -111,6 +111,15 @@ const Header = () => {
               <Link to="hooks/useref" className="hover:text-sky-400 hover:underline pl-5">
                 useRef
               </Link>
+              <Link to="hooks/usecontext" className="hover:text-sky-400 hover:underline pl-5">
+                🚧 useContext
+              </Link>
+              <Link to="hooks/usecallback" className="hover:text-sky-400 hover:underline pl-5">
+                🚧 useCallback
+              </Link>
+              <Link to="hooks/usememo" className="hover:text-sky-400 hover:underline pl-5">
+                🚧 useMemo
+              </Link>
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -122,7 +131,7 @@ const Header = () => {
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ mx: 2 }} />}>
-              <p className="hover:text-sky-400 hover:underline">🚧 React用語集</p>
+              <p className="hover:text-sky-400 hover:underline">React用語集</p>
             </AccordionSummary>
             <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
               <Link to="glossaries/state" className="hover:text-sky-400 hover:underline pl-5">
