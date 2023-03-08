@@ -122,7 +122,7 @@ const Header = () => {
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ mx: 2 }} />}>
-              <p className="hover:text-sky-400 hover:underline">🚧 React用語集</p>
+              <p className="hover:text-sky-400 hover:underline">React用語集</p>
             </AccordionSummary>
             <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
               <Link to="glossaries/state" className="hover:text-sky-400 hover:underline pl-5">
