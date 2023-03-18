@@ -122,7 +122,7 @@ const ReRender = () => {
       <iframe
         title="parent-and-memorized-child"
         className="my-5 h-96"
-        src="//jsfiddle.net/Teppeichang/auvL6frk/9/embedded/js/dark/"
+        src="//jsfiddle.net/Teppeichang/auvL6frk/12/embedded/js/dark/"
       ></iframe>
       <p className="mt-5">
         コンソールを確認してみると、countの値が更新された際に「メモ化された子コンポーネントの再レンダリングが発生しました」が出力され、textの値が変わった時は「子コンポーネントの再レンダリングが発生しました」が出力されないことが分かる。
