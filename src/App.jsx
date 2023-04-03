@@ -22,6 +22,7 @@ import UseMemoPage from "./pages/hooks/UseMemoPage";
 import State from "./pages/glossaries/State";
 import Props from "./pages/glossaries/Props";
 import ReRender from "./pages/glossaries/ReRender";
+import SideEffect from "./pages/glossaries/SideEffect";
 import References from "./pages/References";
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
         <Route path="glossaries/state" element={<State />} />
         <Route path="glossaries/props" element={<Props />} />
         <Route path="glossaries/re-render" element={<ReRender />} />
+        <Route path="glossaries/side-effect" element={<SideEffect />} />
         <Route path="/references" element={<References />} />
       </Routes>
       <Footer />

@@ -143,6 +143,9 @@ const Header = () => {
               <Link to="glossaries/re-render" className="hover:text-sky-400 hover:underline pl-5">
                 再レンダリング
               </Link>
+              <Link to="glossaries/side-effect" className="hover:text-sky-400 hover:underline pl-5">
+                副作用
+              </Link>
             </AccordionDetails>
           </Accordion>
           <Link to="/references" className="hover:text-sky-400 hover:underline pl-4 py-2">
