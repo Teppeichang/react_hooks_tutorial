@@ -112,7 +112,7 @@ const Header = () => {
                 useRef
               </Link>
               <Link to="hooks/usecontext" className="hover:text-sky-400 hover:underline pl-5">
-                🚧 useContext
+                useContext
               </Link>
               <Link to="hooks/usecallback" className="hover:text-sky-400 hover:underline pl-5">
                 🚧 useCallback
