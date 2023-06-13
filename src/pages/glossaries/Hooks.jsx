@@ -1,4 +1,4 @@
-const AboutHooks = () => {
+const Hooks = () => {
   return (
     <div className="my-20 p-10 flex flex-col min-h-screen">
       <p className="text-2xl font-bold">React Hooksって何？</p>
@@ -43,4 +43,4 @@ const AboutHooks = () => {
   );
 };
 
-export default AboutHooks;
+export default Hooks;
