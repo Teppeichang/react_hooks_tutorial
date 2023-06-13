@@ -219,7 +219,7 @@ const UseContextPage = () => {
             <Typography>
               <p>ContextProvider配下のコンポーネントは、<span className="font-bold">ContextProviderのvalueプロパティの値が更新されると、配下全てのコンポーネントに再レンダリングが発生する。</span></p>
               <p className="mt-5">本ページの実例に置き換えると、親コンポーネントで定義しているauthorProfileの値が更新されれば、子コンポーネント1から子コンポーネント3まで全て再レンダリングされるということである。</p>
-              <p className="mt-5">意図しない<Link to="glossaries/re-render" className="font-bold hover:text-sky-400 hover:underline">再レンダリング</Link>を防ぐためにコンポーネントのメモ化をしたり、Contextとして使用する値は更新や変更が発生しないような、定数として定義するものにとどめるといった配慮をした方がよい。</p>
+              <p className="mt-5">意図しない<Link to="/glossaries/re-render" className="font-bold hover:text-sky-400 hover:underline">再レンダリング</Link>を防ぐためにコンポーネントのメモ化をしたり、Contextとして使用する値は更新や変更が発生しないような、定数として定義するものにとどめるといった配慮をした方がよい。</p>
             </Typography>
           </AccordionDetails>
         </Accordion>
