@@ -38,9 +38,10 @@ const Header = () => {
         </Toolbar>
       </AppBar>
       <Drawer variant="temporary" open={open} onClose={handleToggle}>
-        <List sx={{ display: "flex", flexDirection: "column", lineHeight: 3 }}>
+        <List sx={{ display: "flex", flexDirection: "column", lineHeight: 2 }}>
           <Accordion
             elevation={0}
+            defaultExpanded="true"
             sx={{
               "&:before": {
                 display: "none",
@@ -48,11 +49,14 @@ const Header = () => {
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ mx: 2 }} />}>
-              <Link to="es6/about" className="hover:text-sky-400 hover:underline">
-                React Hooks解説の前に: ES6を知ろう
-              </Link>
+              <Typography>
+                React Hooks解説の前に: ES6記法解説
+              </Typography>
             </AccordionSummary>
             <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
+              <Link to="es6/about" className="hover:text-sky-400 hover:underline pl-5">
+                ES6(ES2015)とは
+              </Link>
               <Link to="es6/let-and-const" className="hover:text-sky-400 hover:underline pl-5">
                 let と const
               </Link>
@@ -90,6 +94,7 @@ const Header = () => {
           </Accordion>
           <Accordion
             elevation={0}
+            defaultExpanded="true"
             sx={{
               "&:before": {
                 display: "none",
@@ -97,9 +102,7 @@ const Header = () => {
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ mx: 2 }} />}>
-              <Link to="hooks/about" className="hover:text-sky-400 hover:underline">
-                React Hooksとは？
-              </Link>
+            <Typography>React Hooks実例&解説</Typography>
             </AccordionSummary>
             <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
               <Link to="hooks/usestate" className="hover:text-sky-400 hover:underline pl-5">
@@ -124,6 +127,7 @@ const Header = () => {
           </Accordion>
           <Accordion
             elevation={0}
+            defaultExpanded="true"
             sx={{
               "&:before": {
                 display: "none",
@@ -131,9 +135,12 @@ const Header = () => {
             }}
           >
             <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ mx: 2 }} />}>
-              <p className="hover:text-sky-400 hover:underline">React用語集</p>
+              <p className="hover:text-sky-400 hover:underline">React頻出用語集</p>
             </AccordionSummary>
             <AccordionDetails sx={{ display: "flex", flexDirection: "column" }}>
+              <Link to="glossaries/hooks" className="hover:text-sky-400 hover:underline pl-5">
+                React Hooks(フック)
+              </Link>
               <Link to="glossaries/state" className="hover:text-sky-400 hover:underline pl-5">
                 state
               </Link>
@@ -148,9 +155,6 @@ const Header = () => {
               </Link>
             </AccordionDetails>
           </Accordion>
-          <Link to="/references" className="hover:text-sky-400 hover:underline pl-4 py-2">
-            参考記事
-          </Link>
         </List>
       </Drawer>
     </Box>

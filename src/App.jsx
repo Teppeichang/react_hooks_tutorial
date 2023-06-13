@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Top from "./pages/Top";
-import AboutHooks from "./pages/hooks/About";
+import Hooks from "./pages/glossaries/Hooks";
 import AboutES6 from "./pages/es6/About";
 import LetAndConst from "./pages/es6/LetAndConst";
 import TemplateLiterals from "./pages/es6/TemplateLiterals";
@@ -41,13 +41,13 @@ function App() {
         <Route path="es6/promise-object" element={<PromiseObject />}/>
         <Route path="es6/async-and-await" element={<AsyncAndAwait />}/>
         <Route path="es6/appendix/conditional-operator" element={<ConditionalOperator />}/>
-        <Route path="hooks/about" element={<AboutHooks />}/>
         <Route path="hooks/usestate" element={<UseStatePage />} />
         <Route path="hooks/useeffect" element={<UseEffectPage />} />
         <Route path="hooks/useref" element={<UseRefPage />} />
         <Route path="hooks/usecontext" element={<UseContextPage />} />
         <Route path="hooks/usecallback" element={<UseCallbackPage />} />
         <Route path="hooks/usememo" element={<UseMemoPage />} />
+        <Route path="glossaries/about" element={<Hooks />}/>
         <Route path="glossaries/state" element={<State />} />
         <Route path="glossaries/props" element={<Props />} />
         <Route path="glossaries/re-render" element={<ReRender />} />
