@@ -41,7 +41,7 @@ const Header = () => {
         <List sx={{ display: "flex", flexDirection: "column", lineHeight: 2 }}>
           <Accordion
             elevation={0}
-            defaultExpanded="true"
+            defaultExpanded={true}
             sx={{
               "&:before": {
                 display: "none",
@@ -94,7 +94,7 @@ const Header = () => {
           </Accordion>
           <Accordion
             elevation={0}
-            defaultExpanded="true"
+            defaultExpanded={true}
             sx={{
               "&:before": {
                 display: "none",
@@ -118,7 +118,7 @@ const Header = () => {
                 useContext
               </Link>
               <Link to="hooks/usecallback" className="hover:text-sky-400 hover:underline pl-5">
-                🚧 useCallback
+                useCallback
               </Link>
               <Link to="hooks/usememo" className="hover:text-sky-400 hover:underline pl-5">
                 🚧 useMemo
@@ -127,7 +127,7 @@ const Header = () => {
           </Accordion>
           <Accordion
             elevation={0}
-            defaultExpanded="true"
+            defaultExpanded={true}
             sx={{
               "&:before": {
                 display: "none",
