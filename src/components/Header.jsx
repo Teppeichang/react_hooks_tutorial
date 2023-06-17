@@ -41,7 +41,7 @@ const Header = () => {
         <List sx={{ display: "flex", flexDirection: "column", lineHeight: 2 }}>
           <Accordion
             elevation={0}
-            defaultExpanded="true"
+            defaultExpanded={true}
             sx={{
               "&:before": {
                 display: "none",
@@ -94,7 +94,7 @@ const Header = () => {
           </Accordion>
           <Accordion
             elevation={0}
-            defaultExpanded="true"
+            defaultExpanded={true}
             sx={{
               "&:before": {
                 display: "none",
@@ -127,7 +127,7 @@ const Header = () => {
           </Accordion>
           <Accordion
             elevation={0}
-            defaultExpanded="true"
+            defaultExpanded={true}
             sx={{
               "&:before": {
                 display: "none",
