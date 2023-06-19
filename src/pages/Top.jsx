@@ -9,12 +9,12 @@ const Top = () => {
       </p>
       <p className="text-2xl font-bold mt-10">チュートリアルの構成</p>
       <hr />
-      <p className="mt-5">内容は随時アップデートしております。</p>
       <ul className="list-disc list-inside pl-2 mt-5 leading-8">
         <li>ES6解説 + おまけ</li>
-        <li className="mt-5">React Hooks解説&実例集</li>
-        <li className="mt-5">React頻出用語集</li>
+        <li>React Hooks解説&実例集</li>
+        <li>React頻出用語集</li>
       </ul>
+      <p className="mt-5">内容は随時アップデートしております。</p>
       <p className="text-2xl font-bold mt-10">本チュートリアルの対象者</p>
       <hr />
       <ul className="list-disc list-inside pl-2 mt-5 leading-8">
