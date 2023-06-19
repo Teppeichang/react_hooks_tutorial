@@ -1,7 +1,7 @@
 # Hook into React - React Hooksチュートリアル
 
 React Hooks + Reactでよく用いられるES6構文を、サンプルコードや触れる実例を用いて、できる限りわかりやすく解説するものです。  
-また、React特有の用語(state、propsや再レンダリング etc...)に関しても解説予定で、辞書の様な使い方もできるチュートリアルを目指しております。
+また、React頻出用語(state、propsや再レンダリング etc...)に関しても解説し、辞書の様な使い方もできるチュートリアルを目指しております。
 
 https://reacthookstutorial.netlify.app
 

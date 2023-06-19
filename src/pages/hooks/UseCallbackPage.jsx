@@ -15,11 +15,13 @@ const UseCallbackPage = () => {
     (value) => {
       console.log(`フォームの中身(useCallbackあり): ${value}\nボタンクリック数: ${memorizedCount}`);
     },
+    // eslint-disable-next-line
     [memorizedText]
   );
 
   useEffect(() => {
     memorizedRenderLog(memorizedText);
+    // eslint-disable-next-line
   }, [memorizedRenderLog]);
 
   const [noMemorizedText, setNoMemorizedText] = useState("");
@@ -30,6 +32,7 @@ const UseCallbackPage = () => {
 
   useEffect(() => {
     noMemorizedRenderLog(noMemorizedText);
+    // eslint-disable-next-line
   }, [noMemorizedRenderLog]);
 
   return (
