@@ -23,6 +23,7 @@ import State from "./pages/glossaries/State";
 import Props from "./pages/glossaries/Props";
 import ReRender from "./pages/glossaries/ReRender";
 import SideEffect from "./pages/glossaries/SideEffect";
+import Memorize from "./pages/glossaries/Memorize";
 import References from "./pages/References";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="glossaries/props" element={<Props />} />
         <Route path="glossaries/re-render" element={<ReRender />} />
         <Route path="glossaries/side-effect" element={<SideEffect />} />
+        <Route path="glossaries/memorize" element={<Memorize />} />
         <Route path="/references" element={<References />} />
       </Routes>
       <Footer />
