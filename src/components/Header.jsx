@@ -118,10 +118,10 @@ const Header = () => {
                 useContext
               </Link>
               <Link to="hooks/usecallback" className="hover:text-sky-400 hover:underline pl-5">
-                useCallback
+                🚧 useCallback
               </Link>
               <Link to="hooks/usememo" className="hover:text-sky-400 hover:underline pl-5">
-                🚧 useMemo
+                useMemo
               </Link>
             </AccordionDetails>
           </Accordion>
@@ -152,6 +152,9 @@ const Header = () => {
               </Link>
               <Link to="glossaries/side-effect" className="hover:text-sky-400 hover:underline pl-5">
                 副作用
+              </Link>
+              <Link to="glossaries/memorize" className="hover:text-sky-400 hover:underline pl-5">
+                🚧 メモ化
               </Link>
             </AccordionDetails>
           </Accordion>
