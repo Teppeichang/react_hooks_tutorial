@@ -59,7 +59,7 @@ const UseCallbackPage = () => {
           <AccordionDetails>
             <Typography>
               <p>メモ化された「コールバック関数」を返すフック。</p>
-              <p>
+              <p className="mt-5">
                 メモ化とは、関数の呼び出し結果をキャッシュ(記憶)しておき、再度同じ関数の呼び出しが発生した際に、
                 <span className="font-bold">
                   同じ処理を再度行うのではなく、キャッシュから関数の呼び出し結果を返す
@@ -67,7 +67,7 @@ const UseCallbackPage = () => {
                 機能である。
               </p>
               <p>
-                メモ化は余計な処理を無くすことによるパフォーマンスの向上や、予期しないコンポーネントの
+                メモ化により余計な処理を無くすことで、パフォーマンスの向上や予期しないコンポーネントの
                 <Link
                   to="/glossaries/re-render"
                   className="font-bold hover:text-sky-400 hover:underline"
@@ -75,6 +75,15 @@ const UseCallbackPage = () => {
                   再レンダリング
                 </Link>
                 を防ぐことができる。
+              </p>
+              <iframe
+                title="usecallback-syntax"
+                className="my-5 h-24 w-full"
+                src="//jsfiddle.net/Teppeichang/vhbLzsyp/embedded/js/dark/"
+              ></iframe>
+              <p>
+                第二引数の依存配列に指定した値が更新されれば、第一引数に指定したコールバック関数が実行される
+                という仕組みである。
               </p>
             </Typography>
           </AccordionDetails>
@@ -191,10 +200,26 @@ const UseCallbackPage = () => {
                 className="my-5 h-96 w-full"
                 src="//jsfiddle.net/Teppeichang/7wj018o3/14/embedded/js/dark/"
               ></iframe>
-              <p>上記サンプルコードのように、useEffectの第二引数に渡している関数 renderLog に useCallbackを使用することで、関数の呼び出し結果がキャッシュされる。</p>
-              <p>これにより、「renderLogの引数(=フォームの内容)に変更が発生したときのみ」、関数 renderLog が呼び出されるようになる。</p>
-              <p className="mt-5">さらに、memo(React.memo)と組み合わせて使うことで、<span className="font-bold">親コンポーネント側で props として渡す関数がある場合は、useCallbackを関数に使用し、memoでメモ化した子コンポーネントで props として関数を受け取る</span>ことができる。</p>
-              <p>memoとの組み合わせにより、「予期せぬ関数の呼び出し」に加えて「予期せぬコンポーネントの再レンダリング」も防ぐことができる。</p>
+              <p>
+                上記サンプルコードのように、useEffectの第二引数に渡している関数 renderLog に
+                useCallbackを使用することで、関数の呼び出し結果がキャッシュされる。
+              </p>
+              <p>
+                これにより、「renderLogの引数(=フォームの内容)に変更が発生したときのみ」、関数
+                renderLog が呼び出されるようになる。
+              </p>
+              <p className="mt-5">
+                さらに、memo(React.memo)と組み合わせて使うことで、
+                <span className="font-bold">
+                  親コンポーネント側で props
+                  として渡す関数がある場合は、useCallbackを関数に使用し、memoでメモ化した子コンポーネントで
+                  props として関数を受け取る
+                </span>
+                ことができる。
+              </p>
+              <p>
+                memoとの組み合わせにより、「予期せぬ関数の呼び出し」に加えて「予期せぬコンポーネントの再レンダリング」も防ぐことができる。
+              </p>
             </Typography>
           </AccordionDetails>
         </Accordion>

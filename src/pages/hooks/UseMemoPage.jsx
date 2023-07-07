@@ -71,7 +71,7 @@ const UseMemoPage = () => {
                 src="//jsfiddle.net/Teppeichang/9ufv8ngs/1/embedded/js/dark/"
               ></iframe>
               <p>
-                第二引数の依存配列に指定した値が更新されれば、第一引数に指定した関数が実行される
+                第二引数の依存配列に指定した値が更新されれば、第一引数に指定した関数が再実行される
                 という仕組みである。
               </p>
             </Typography>
