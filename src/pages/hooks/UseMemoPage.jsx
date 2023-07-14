@@ -35,18 +35,21 @@ const UseMemoPage = () => {
               ＋
             </button>
           </div>
-          <div className="flex justify-center items-center mt-2">
-            <div className="flex items-center">
-              <p className="font-semibold">
-                Count2: {count2} Count×2: {doubledCount}
-              </p>
-              <button
-                type="button"
-                className="text-white bg-black font-medium text-center ml-5 px-2"
-                onClick={() => setCount2(count2 + 1)}
-              >
-                ＋
-              </button>
+          <div className="flex justify-center mt-4">
+            <div className="flex flex-col">
+              <div className="flex">
+                <p className="font-semibold">Count2: {count2}</p>
+              </div>
+              <div className="flex">
+                <p className="font-semibold">Doubled Count: {doubledCount}</p>
+                <button
+                  type="button"
+                  className="text-white bg-black font-medium text-center ml-5 px-2"
+                  onClick={() => setCount2(count2 + 1)}
+                >
+                  ＋
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -115,8 +118,12 @@ const UseMemoPage = () => {
             <Typography>
               <p className="font-bold">結論はNO</p>
               <p>useMemoの実行自体にも処理時間は発生しているためである。</p>
-              <p className="mt-5">useMemoは、第二引数の依存配列に渡されている値が変わっているか否かを判断したうえで、関数を実行するか否かを判定する処理を行う。</p>
-              <p>処理の重くない関数に対してuseMemoを使ってしまうと、判定処理の方に時間がかかってしまい、逆にパフォーマンスが低下する恐れがある。</p>
+              <p className="mt-5">
+                useMemoは、第二引数の依存配列に渡されている値が変わっているか否かを判断したうえで、関数を実行するか否かを判定する処理を行う。
+              </p>
+              <p>
+                処理の重くない関数に対してuseMemoを使ってしまうと、判定処理の方に時間がかかってしまい、逆にパフォーマンスが低下する恐れがある。
+              </p>
             </Typography>
           </AccordionDetails>
         </Accordion>
