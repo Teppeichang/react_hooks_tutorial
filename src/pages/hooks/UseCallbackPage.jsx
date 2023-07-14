@@ -1,55 +1,34 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { TextField } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box } from "@mui/system";
+import UseCallbackChild from "../../components/UseCallbackChild";
 
 const UseCallbackPage = () => {
-  const [memorizedText, setMemorizedText] = useState("");
-  const [memorizedCount, setMemorizedCount] = useState(0);
-  const memorizedRenderLog = useCallback(
-    (value) => {
-      console.log(`フォームの中身(useCallbackあり): ${value}\nボタンクリック数: ${memorizedCount}`);
-    },
-    // eslint-disable-next-line
-    [memorizedText]
-  );
+  console.log("親コンポーネントがレンダリングされました")
 
-  useEffect(() => {
-    memorizedRenderLog(memorizedText);
-    // eslint-disable-next-line
-  }, [memorizedRenderLog]);
+  const [count, setCount] = useState(0);
 
-  const [noMemorizedText, setNoMemorizedText] = useState("");
-  const [noMemorizedCount, setNoMemorizedCount] = useState(0);
-  const noMemorizedRenderLog = (value) => {
-    console.log(`フォームの中身(useCallbackなし): ${value}\nボタンクリック数: ${noMemorizedCount}`);
-  };
-
-  useEffect(() => {
-    noMemorizedRenderLog(noMemorizedText);
-    // eslint-disable-next-line
-  }, [noMemorizedRenderLog]);
+  const handleChildButtonClick = useCallback(() => {
+    console.log("子コンポーネントのボタンがクリックされました")
+  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
       <p className="text-2xl mb-5">useCallback</p>
       <div className="flex flex-col items-center mt-5 mb-20">
-        <TextField
-          label="何か入力してください"
-          value={memorizedText}
-          onChange={(event) => setMemorizedText(event.target.value)}
-        />
+        <p className="font-semibold">Count: {count}</p>
         <button
           className="bg-black hover:bg-slate-700 text-white font-medium mt-5 py-2 px-4 rounded w-max"
-          onClick={() => setMemorizedCount(memorizedCount + 1)}
+          onClick={() => setCount(count + 1)}
         >
-          Click
+          Parent Component Button
         </button>
+        <UseCallbackChild handleChildButtonClick={handleChildButtonClick} />
       </div>
       <Box sx={{ width: 800, mb: 10 }}>
         <Accordion>
@@ -134,17 +113,6 @@ const UseCallbackPage = () => {
                 ということである。
               </p>
               <div className="flex flex-col my-5">
-                <TextField
-                  label="何か入力してください"
-                  value={noMemorizedText}
-                  onChange={(event) => setNoMemorizedText(event.target.value)}
-                />
-                <button
-                  className="bg-black hover:bg-slate-700 text-white font-medium mt-2 py-2 px-8 rounded w-max"
-                  onClick={() => setNoMemorizedCount(noMemorizedCount + 1)}
-                >
-                  Click
-                </button>
               </div>
               <iframe
                 title="no-usecallback"
