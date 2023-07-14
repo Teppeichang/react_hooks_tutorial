@@ -109,24 +109,6 @@ const UseMemoPage = () => {
         </Accordion>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>memo/useCallback/useMemo の違い</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              <p className="font-bold">memo: メモ化の対象は「コンポーネント」</p>
-              <p>コンポーネントを定義する時に使用する機能で、コンポーネントの不要な再レンダリングを防ぐために使用する。</p>
-              <p className="mt-5 font-bold">useCallback: メモ化の対象は「関数」</p>
-              <p>主にmemoでメモ化した子コンポーネントで受け取るpropsが関数の場合、その子コンポーネントの不要な再レンダリングを防ぐために使用する。</p>
-              <p>子コンポーネントにpropsとして渡さないケースであっても、コンポーネント内の関数が副作用を持つ場合はuseCallbackを使用した方が良いケースもある。</p>
-              <p>第二引数の依存配列の値の変化の有無を基準に、関数を再実行するのか・再実行しないのかを判断する。</p>
-              <p className="mt-5 font-bold">useMemo: メモ化の対象は「関数の実行結果(=値)」</p>
-              <p>コンポーネントが再レンダリングされる際の不要な関数の再実行を防ぐために使用する。</p>
-              <p>第二引数の依存配列の値の変化の有無を基準に、関数を再実行するのか・再実行せずキャッシュしておいた値を返すのかを判断する。</p>
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>コンポーネント内に関数があればとりあえずuseMemoを使えば良い？</Typography>
           </AccordionSummary>
           <AccordionDetails>
