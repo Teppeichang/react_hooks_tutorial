@@ -9,12 +9,12 @@ import { Box } from "@mui/system";
 import UseCallbackChild from "../../components/UseCallbackChild";
 
 const UseCallbackPage = () => {
-  console.log("親コンポーネントがレンダリングされました")
+  console.log("親コンポーネントがレンダリングされました");
 
   const [count, setCount] = useState(0);
 
   const handleChildButtonClick = useCallback(() => {
-    console.log("子コンポーネントのボタンがクリックされました")
+    console.log("子コンポーネントのボタンがクリックされました");
   }, []);
 
   return (
@@ -51,12 +51,19 @@ const UseCallbackPage = () => {
               <iframe
                 title="usecallback-syntax"
                 className="my-5 h-24 w-full"
-                src="//jsfiddle.net/Teppeichang/vhbLzsyp/embedded/js/dark/"
+                src="//jsfiddle.net/Teppeichang/vhbLzsyp/2/embedded/js/dark/"
               ></iframe>
               <p>
                 第二引数の依存配列に指定した値が更新されれば、第一引数に指定したコールバック関数が実行される
                 という仕組みである。
               </p>
+              <iframe
+                title="usecallback-syntax-empty-array"
+                className="my-5 h-24 w-full"
+                src="//jsfiddle.net/Teppeichang/y8zgow6L/embedded/js/dark/"
+              ></iframe>
+              <p>第二引数の依存配列は空配列を指定することもできる。</p>
+              <p>空配列を指定した場合は<span className="font-bold">コンポーネントの初回レンダリング時のみ</span>、第一引数のコールバック関数が実行される。</p>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -112,8 +119,7 @@ const UseCallbackPage = () => {
                 つまり、<span className="font-bold">再レンダリングの度に関数が呼び出される</span>
                 ということである。
               </p>
-              <div className="flex flex-col my-5">
-              </div>
+              <div className="flex flex-col my-5"></div>
               <iframe
                 title="no-usecallback"
                 className="my-5 h-96 w-full"
@@ -145,7 +151,7 @@ const UseCallbackPage = () => {
           <AccordionDetails>
             <Typography>
               <p>
-                前項のサンプルコードはuseEffectの第二引数(依存配列)に関数 renderLog
+                本ページのサンプルコードはuseEffectの第二引数(依存配列)に関数 renderLog
                 を渡しているので、このままでは関数 renderLog
                 の引数の変更の有無に関わらず、再レンダリングの度に関数 renderLog
                 が呼び出されてしまう。
@@ -156,11 +162,6 @@ const UseCallbackPage = () => {
               <p>
                 この「予期しない関数の呼び出し」を防ぐために使用するフックが、useCallbackである。
               </p>
-              <iframe
-                title="usecallback"
-                className="my-5 h-96 w-full"
-                src="//jsfiddle.net/Teppeichang/7wj018o3/14/embedded/js/dark/"
-              ></iframe>
               <p>
                 上記サンプルコードのように、useEffectの第二引数に渡している関数 renderLog に
                 useCallbackを使用することで、関数の呼び出し結果がキャッシュされる。
