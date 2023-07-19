@@ -18,7 +18,7 @@ const UseCallbackPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <div className="flex flex-col justify-center items-center min-h-screen mt-20">
       <p className="text-2xl mb-5">useCallback</p>
       <div className="flex flex-col items-center mt-5 mb-20">
         <p className="font-semibold">Count: {count}</p>
@@ -119,24 +119,13 @@ const UseCallbackPage = () => {
                 つまり、<span className="font-bold">再レンダリングの度に関数が呼び出される</span>
                 ということである。
               </p>
-              <div className="flex flex-col my-5"></div>
-              <iframe
-                title="no-usecallback"
-                className="my-5 h-96 w-full"
-                src="//jsfiddle.net/Teppeichang/14253hsm/13/embedded/js/dark/"
-              ></iframe>
-              <p>
-                例えば、上記のサンプルは関数 renderLog
-                の引数(=フォームに入力された内容)に変更が発生すると関数 renderLog
-                が呼び出されるようになっている。
-              </p>
               <p className="mt-5">
-                前項(JavaScriptの関数に関する特性)のサンプルコードで例えると、以下のようなイメージ↓
+                stateを持ったコンポーネントのサンプルで例えると、以下のようなイメージ↓
               </p>
               <iframe
                 title="function-identity-on-react"
                 className="my-5 h-96 w-full"
-                src="//jsfiddle.net/Teppeichang/hcpuLk39/8/embedded/js/dark/"
+                src="//jsfiddle.net/Teppeichang/hcpuLk39/20/embedded/js/dark/"
               ></iframe>
               <p>
                 再レンダリングの度に同じ関数が呼び出されたとしても、それらはそれぞれ異なる関数として扱われる。
@@ -169,18 +158,6 @@ const UseCallbackPage = () => {
               <p>
                 これにより、「renderLogの引数(=フォームの内容)に変更が発生したときのみ」、関数
                 renderLog が呼び出されるようになる。
-              </p>
-              <p className="mt-5">
-                さらに、memo(React.memo)と組み合わせて使うことで、
-                <span className="font-bold">
-                  親コンポーネント側で props
-                  として渡す関数がある場合は、useCallbackを関数に使用し、memoでメモ化した子コンポーネントで
-                  props として関数を受け取る
-                </span>
-                ことができる。
-              </p>
-              <p>
-                memoとの組み合わせにより、「予期せぬ関数の呼び出し」に加えて「予期せぬコンポーネントの再レンダリング」も防ぐことができる。
               </p>
             </Typography>
           </AccordionDetails>
