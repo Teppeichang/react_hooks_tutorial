@@ -33,43 +33,7 @@ const UseCallbackPage = () => {
       <Box sx={{ width: 800, mb: 10 }}>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>useCallbackとは？</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              <p>メモ化された「コールバック関数」を返すフック。</p>
-              <p>
-                メモ化により余計な処理を無くすことで、パフォーマンスの向上や予期しないコンポーネントの
-                <Link
-                  to="/glossaries/re-render"
-                  className="font-bold hover:text-sky-400 hover:underline"
-                >
-                  再レンダリング
-                </Link>
-                を防ぐことができる。
-              </p>
-              <iframe
-                title="usecallback-syntax"
-                className="my-5 h-24 w-full"
-                src="//jsfiddle.net/Teppeichang/vhbLzsyp/2/embedded/js/dark/"
-              ></iframe>
-              <p>
-                第二引数の依存配列に指定した値が更新されれば、第一引数に指定したコールバック関数が実行される
-                という仕組みである。
-              </p>
-              <iframe
-                title="usecallback-syntax-empty-array"
-                className="my-5 h-24 w-full"
-                src="//jsfiddle.net/Teppeichang/y8zgow6L/embedded/js/dark/"
-              ></iframe>
-              <p>第二引数の依存配列は空配列を指定することもできる。</p>
-              <p>空配列を指定した場合は<span className="font-bold">コンポーネントの初回レンダリング時のみ</span>、第一引数のコールバック関数が実行される。</p>
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>使い方の前に① JavaScriptの関数に関する特性を理解する</Typography>
+            <Typography>解説の前に① JavaScriptの関数に関する特性を理解する</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -102,7 +66,7 @@ const UseCallbackPage = () => {
         </Accordion>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>使い方の前に② Reactにおける再レンダリングと関数呼び出しの挙動</Typography>
+            <Typography>解説の前に② Reactにおける再レンダリングと関数呼び出しの挙動</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -128,37 +92,59 @@ const UseCallbackPage = () => {
                 src="//jsfiddle.net/Teppeichang/hcpuLk39/20/embedded/js/dark/"
               ></iframe>
               <p>
-                再レンダリングの度に同じ関数が呼び出されたとしても、それらはそれぞれ異なる関数として扱われる。
+                再レンダリングの度に同じ関数が呼び出されたとしても、参照値が異なるため、それぞれが別の関数として扱われる。
               </p>
             </Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>useCallbackの使い方</Typography>
+            <Typography>useCallbackとは？</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
+              <p>メモ化された「コールバック関数」を返すフック。</p>
               <p>
-                本ページのサンプルコードはuseEffectの第二引数(依存配列)に関数 renderLog
-                を渡しているので、このままでは関数 renderLog
-                の引数の変更の有無に関わらず、再レンダリングの度に関数 renderLog
-                が呼び出されてしまう。
+                メモ化により余計な処理を無くすことで、パフォーマンスの向上や予期しないコンポーネントの
+                <Link
+                  to="/glossaries/re-render"
+                  className="font-bold hover:text-sky-400 hover:underline"
+                >
+                  再レンダリング
+                </Link>
+                を防ぐことができる。
               </p>
+              <iframe
+                title="usecallback-syntax"
+                className="my-5 h-24 w-full"
+                src="//jsfiddle.net/Teppeichang/vhbLzsyp/2/embedded/js/dark/"
+              ></iframe>
               <p>
-                想定している挙動が「renderLogの引数(=フォームの内容)に変更が発生したときのみ」としているのであれば、これは予期しない関数の呼び出しということなる。
+                第二引数の依存配列に指定した値が更新されれば、第一引数に指定したコールバック関数が実行される
+                という仕組みである。
               </p>
+              <iframe
+                title="usecallback-syntax-empty-array"
+                className="my-5 h-24 w-full"
+                src="//jsfiddle.net/Teppeichang/y8zgow6L/embedded/js/dark/"
+              ></iframe>
+              <p>第二引数の依存配列は空配列を指定することもできる。</p>
               <p>
-                この「予期しない関数の呼び出し」を防ぐために使用するフックが、useCallbackである。
+                空配列を指定した場合は
+                <span className="font-bold">コンポーネントの初回レンダリング時のみ</span>
+                、第一引数のコールバック関数が実行される。
               </p>
-              <p>
-                上記サンプルコードのように、useEffectの第二引数に渡している関数 renderLog に
-                useCallbackを使用することで、関数の呼び出し結果がキャッシュされる。
-              </p>
-              <p>
-                これにより、「renderLogの引数(=フォームの内容)に変更が発生したときのみ」、関数
-                renderLog が呼び出されるようになる。
-              </p>
+              <p className="mt-5">本ページのサンプルは、第二引数の依存配列に空配列を指定したパターンで実装している。</p>
+              <iframe
+                title="usecallback-sample-parent"
+                className="my-5 h-96 w-full"
+                src="//jsfiddle.net/Teppeichang/7wj018o3/22/embedded/js/dark/"
+              ></iframe>
+              <iframe
+                title="usecallback-sample-child"
+                className="my-5 h-96 w-full"
+                src="//jsfiddle.net/Teppeichang/9spnvf4u/3/embedded/js/dark/"
+              ></iframe>
             </Typography>
           </AccordionDetails>
         </Accordion>
