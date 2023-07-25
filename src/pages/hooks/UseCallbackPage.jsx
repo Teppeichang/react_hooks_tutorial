@@ -96,7 +96,7 @@ const UseCallbackPage = () => {
             <Typography>useCallbackとは？</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <p>メモ化された「コールバック関数」を返すフック。</p>
+            <p>「関数」をメモ化するフック。</p>
             <p className="mt-5">
               親コンポーネントから子コンポーネントにpropsとして渡す関数を、不要な再レンダリングが起きないような状態にして渡したいときに使用する。
             </p>
@@ -110,7 +110,7 @@ const UseCallbackPage = () => {
             <iframe
               title="usecallback-syntax"
               className="my-5 h-24 w-full"
-              src="//jsfiddle.net/Teppeichang/vhbLzsyp/2/embedded/js/dark/"
+              src="//jsfiddle.net/Teppeichang/vhbLzsyp/3/embedded/js/dark/"
             ></iframe>
             <p>
               第二引数の依存配列に指定した値が更新されれば、第一引数に指定したコールバック関数が実行される
@@ -119,7 +119,7 @@ const UseCallbackPage = () => {
             <iframe
               title="usecallback-syntax-empty-array"
               className="my-5 h-24 w-full"
-              src="//jsfiddle.net/Teppeichang/y8zgow6L/embedded/js/dark/"
+              src="//jsfiddle.net/Teppeichang/y8zgow6L/2/embedded/js/dark/"
             ></iframe>
             <p>また、第二引数の依存配列には空配列を指定することもできる。</p>
             <p>
