@@ -1,25 +1,20 @@
 const Memorize = () => {
   return (
     <div className="my-20 p-10 flex flex-col min-h-screen">
-      <p className="text-2xl font-bold">メモ化とは</p>
+      <p className="text-2xl font-bold">メモ化</p>
       <hr />
+      <p className="mt-5">Reactにおけるパフォーマンス最適化の手段。</p>
       <p className="mt-5">
-        関数の呼び出し結果(=値)をキャッシュ(記憶)しておき、再度同じ関数の呼び出しが発生した際に、
+        メモ化を行うことで、props・関数・関数の実行結果(=値)をキャッシュ(記憶)しておき、再レンダリングや関数の再実行が起こりうる事象が発生した際に、
         <span className="font-bold">
-          同じ関数を再度実行するのではなく、キャッシュから関数の呼び出し結果を返す
+          キャッシュしておいたprops・関数・関数の実行結果を用いることで、不要な再レンダリングや関数の再実行を防ぐ
         </span>
-        こと。
+        ことができる。
       </p>
-      <p className="mt-5 text-2xl font-bold">メモ化による効果</p>
-      <hr />
-      <p className="mt-5">不要な関数の再実行や、不要な再レンダリングの発生を抑えることができる。</p>
-      <p>上記の効果は一般的に「パフォーマンスの最適化」と呼ばれている。</p>
-      <p>
+      <p className="mt-5">
         階層構造化されたコンポーネント間をデータが行き来するというReactの特性上、不要な処理はパフォーマンスの低下につながる。
       </p>
-      <p className="mt-5">
-        Reactで開発する際は、いかにしてパフォーマンスを最適化するかを念頭に置く必要がある
-      </p>
+      <p>Reactで開発する際は、いかにしてパフォーマンスを最適化するかを念頭に置く必要がある</p>
       <p className="mt-5 text-2xl font-bold">メモ化のための機能</p>
       <hr />
       <p className="mt-5">Reactにはメモ化を行うための3つの機能が備わっている</p>
@@ -35,14 +30,16 @@ const Memorize = () => {
       <hr />
       <p className="mt-5 font-bold">memo</p>
       <p className="font-bold">メモ化の対象: コンポーネント</p>
+      <iframe
+        title="react-memo-syntax"
+        className="my-5 h-96 w-full"
+        src="//jsfiddle.net/Teppeichang/fudboh86/2/embedded/js/dark/"
+      ></iframe>
       <p className="mt-2">
-        コンポーネントを定義する時に使用する機能で、コンポーネントの不要な再レンダリングを防ぐために使用する。
+        親コンポーネントから渡されたpropsの値の変化の有無を基準に、コンポーネントを再レンダリングするか否かを判断する。
       </p>
       <p className="mt-5 font-bold">useCallback</p>
       <p className="font-bold">メモ化の対象: 関数</p>
-      <p className="mt-2">
-        親コンポーネントから子コンポーネントにpropsとして渡す関数を、不要な再レンダリングが起きないような状態にして渡したいときに使用する。
-      </p>
       <iframe
         title="usecallback-syntax"
         className="my-5 h-24 w-full"
@@ -63,9 +60,6 @@ const Memorize = () => {
       </p>
       <p className="mt-5 font-bold">useMemo</p>
       <p className="font-bold">メモ化の対象: 関数の実行結果(=値)</p>
-      <p className="mt-2">
-        コンポーネントが再レンダリングされる際の不要な関数の再実行を防ぐために使用する。
-      </p>
       <iframe
         title="usememo-syntax"
         className="my-5 h-24 w-full"
@@ -73,6 +67,20 @@ const Memorize = () => {
       ></iframe>
       <p>
         第二引数の依存配列の値の変化の有無を基準に、関数を再実行したうえで値を返すのか・再実行せずキャッシュしておいた値を返すのかを判断する。
+      </p>
+      <p className="mt-5 text-2xl font-bold">memo/useCallback/useMemo の使い分け</p>
+      <hr />
+      <p className="mt-5 font-bold">memo</p>
+      <p className="mt-2">
+        子コンポーネントに渡しているpropsの値が変わっていないのに、子コンポーネントが再レンダリングされてしまうという事象を防ぎたいときに使用する。
+      </p>
+      <p className="mt-5 font-bold">useCallback</p>
+      <p className="mt-2">
+        親コンポーネントから子コンポーネントにpropsとして渡す関数を、不要な再レンダリングが起きないような状態にして渡したいときに使用する。
+      </p>
+      <p className="mt-5 font-bold">useMemo</p>
+      <p className="mt-2">
+        コンポーネントに関数(特に処理の重い関数)があって、コンポーネントが再レンダリングされる際の不要な関数の再実行を防ぎたいときに使用する。
       </p>
     </div>
   );
