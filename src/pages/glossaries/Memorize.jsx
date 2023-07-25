@@ -69,10 +69,10 @@ const Memorize = () => {
       <iframe
         title="usememo-syntax"
         className="my-5 h-24 w-full"
-        src="//jsfiddle.net/Teppeichang/9ufv8ngs/1/embedded/js/dark/"
+        src="//jsfiddle.net/Teppeichang/9ufv8ngs/5/embedded/js/dark"
       ></iframe>
       <p>
-        第二引数の依存配列の値の変化の有無を基準に、関数を再実行するのか・再実行せずキャッシュしておいた値を返すのかを判断する。
+        第二引数の依存配列の値の変化の有無を基準に、関数を再実行したうえで値を返すのか・再実行せずキャッシュしておいた値を返すのかを判断する。
       </p>
     </div>
   );
